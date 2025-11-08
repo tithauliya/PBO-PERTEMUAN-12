@@ -31,16 +31,6 @@ GUI menggunakan **Swing** dan **JTabbedPane** untuk memisahkan fungsi/modul agar
 Referensi: tutorial Oracle tentang penggunaan **JTabbedPane**.
 
 ---
-
-## Teknologi yang Digunakan
-- **Java** (versi sesuai proyek)  
-- **JPA** (misal Hibernate sebagai provider)  
-- **Database relasional** (contoh: MySQL)  
-- **Swing GUI** dengan **JTabbedPane**  
-- **IDE:** NetBeans (atau lainnya yang mendukung Swing form builder)  
-
----
-
 ##  Catatan Penting
 - Jika tab “Pelanggan” dipilih dan pengguna mencoba menghapus pelanggan yang masih memiliki roti, aplikasi akan menampilkan **peringatan** dan **tidak menghapus data**.  
 - Pastikan tabel database membuat **foreign key** yang relevan, misal:
