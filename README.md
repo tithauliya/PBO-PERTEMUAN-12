@@ -30,31 +30,6 @@ GUI menggunakan **Swing** dan **JTabbedPane** untuk memisahkan fungsi/modul agar
 - Masing-masing tab menampilkan panel sendiri dengan **JTable**, tombol CRUD, dan form input.  
 Referensi: tutorial Oracle tentang penggunaan **JTabbedPane**.
 
----
-##  Catatan Penting
-- Jika tab “Pelanggan” dipilih dan pengguna mencoba menghapus pelanggan yang masih memiliki roti, aplikasi akan menampilkan **peringatan** dan **tidak menghapus data**.  
-- Pastikan tabel database membuat **foreign key** yang relevan, misal:
-
-```sql
-CREATE TABLE Pelanggan (
-    id_pelanggan CHAR(4) PRIMARY KEY,
-    nama_pelanggan VARCHAR(100),
-    alamat VARCHAR(255),
-    no_telp VARCHAR(20)
-);
-
-CREATE TABLE Roti (
-    id_roti CHAR(4) PRIMARY KEY,
-    nama_roti VARCHAR(100),
-    harga INT,
-    stock INT,
-    id_pelanggan CHAR(4),
-    FOREIGN KEY (id_pelanggan) REFERENCES Pelanggan(id_pelanggan)
-);
-```
-
----
-
 ## ✍️ Penulis
 **Titha Auliya Khotim**  
 Mahasiswa Sistem Informasi  
