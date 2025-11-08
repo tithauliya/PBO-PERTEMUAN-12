@@ -25,23 +25,7 @@ GUI menggunakan **Swing** dan **JTabbedPane** untuk memisahkan fungsi/modul agar
 
 ---
 
-## Konsep Relasi (di JPA)
-Contoh anotasi dalam entitas menggunakan **JPA**:
-
-```java
-// Pelanggan.java
-@OneToMany(mappedBy = "pelanggan", cascade = CascadeType.ALL)
-private List<Roti> daftarRoti;
-
-// Roti.java
-@ManyToOne
-@JoinColumn(name = "id_pelanggan", referencedColumnName = "id_pelanggan")
-private Pelanggan pelanggan;
-```
-
-Relasi ini memungkinkan aplikasi untuk mengecek dan menjaga **integritas data**, misalnya tidak menghapus pelanggan yang masih memiliki roti.
-
-Selain itu, **GUI menggunakan JTabbedPane** supaya pengguna bisa:  
+ **GUI menggunakan JTabbedPane** supaya pengguna bisa:  
 - Berpindah antar tab “Pelanggan” dan “Roti”.  
 - Masing-masing tab menampilkan panel sendiri dengan **JTable**, tombol CRUD, dan form input.  
 Referensi: tutorial Oracle tentang penggunaan **JTabbedPane**.
